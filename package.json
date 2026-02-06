@@ -1,0 +1,21 @@
+{
+  "name": "swb",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@ecl/preset-ec": "5.0.0-alpha.22.3",
+    "@nuxt/content": "^3.11.0",
+    "@nuxthq/studio": "^2.2.1",
+    "better-sqlite3": "^12.6.2",
+    "nuxt": "^4.3.0",
+    "vue": "^3.5.27",
+    "vue-router": "^4.6.4"
+  }
+}
