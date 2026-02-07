@@ -1,0 +1,34 @@
+@theme static {
+  /* ECL (Europa Component Library) color palette mapped to Tailwind shades */
+  --color-ecl-50: #e6edff;
+  --color-ecl-100: #d9e3ff;
+  --color-ecl-200: #b0c6ff;
+  --color-ecl-300: #8cacff;
+  --color-ecl-400: #5987ff;
+  --color-ecl-500: #0046ff;
+  --color-ecl-600: #0035bf;
+  --color-ecl-700: #002a99;
+  --color-ecl-800: #001f73;
+  --color-ecl-900: #001959;
+  --color-ecl-950: #000d33;
+
+  /* Use Inter font to match ECL */
+  --font-sans: 'Inter', Arial, sans-serif;
+}
+
+/*
+ * Prevent ECL global styles from breaking Nuxt UI components.
+ * ECL's .ecl-text-input and reset styles override border, padding, etc.
+ */
+[data-nuxt-ui] input,
+.ui-input input,
+input[class*="rounded-"] {
+  border-style: solid;
+}
+
+/* Spacing for Nuxt UI components rendered inside MDC content */
+.ecl-u-type-prose > div + div,
+.ecl-u-type-prose > button + div,
+.ecl-u-type-prose > div + button {
+  margin-top: 1rem;
+}

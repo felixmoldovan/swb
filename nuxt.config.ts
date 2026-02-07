@@ -5,10 +5,7 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2026-02-05',
 
-  modules: [
-    '@nuxt/content',
-    '@nuxthq/studio'
-  ],
+  modules: ['@nuxt/content', 'nuxt-studio'],
 
   css: [], 
 
@@ -24,13 +21,20 @@ export default defineNuxtConfig({
     }
   },
 
+  studio: {
+    // Studio admin route (default: '/_studio')
+    route: '/_studio',
+    
+    // Git repository configuration (owner and repo are required)
+    repository: {
+      provider: 'github', // 'github' or 'gitlab'
+      owner: 'felixmoldovan', // your GitHub/GitLab username or organization
+      repo: 'swb', // your repository name
+      branch: 'main', // the branch to commit to (default: main)
+    }
+  },
+
   build: {
     transpile: ['@ecl/preset-ec']
   },
-
-  content: {
-    highlight: {
-      theme: 'github-light'
-    }
-  }
 })
